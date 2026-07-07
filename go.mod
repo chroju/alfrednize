@@ -1,5 +1,10 @@
 module github.com/chroju/alfrednize
 
-go 1.16
+go 1.25.0
 
-require golang.org/x/crypto v0.0.0-20210421170649-83a5a9bb288b
+require golang.org/x/crypto v0.53.0
+
+require (
+	golang.org/x/sys v0.46.0 // indirect
+	golang.org/x/term v0.44.0 // indirect
+)

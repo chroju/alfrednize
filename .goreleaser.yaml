@@ -30,6 +30,7 @@ changelog:
   skip: true
 brews:
   - name: alfrednize
+    skip_upload: true
     tap:
       owner: chroju
       name: homebrew-tap

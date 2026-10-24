@@ -1,3 +1,4 @@
+version: 2
 env:
   - GO111MODULE=on
 before:
@@ -23,23 +24,8 @@ archives:
       {{- else }}{{ .Arch }}{{ end }}
     format_overrides:
       - goos: windows
-        format: zip
+        formats: ["zip"]
     files:
       - none*
 changelog:
-  skip: true
-brews:
-  - name: alfrednize
-    skip_upload: true
-    tap:
-      owner: chroju
-      name: homebrew-tap
-      token:
-    url_template: "https://github.com/chroju/alfrednize/releases/download/{{ .Tag }}/{{ .ArtifactName }}"
-    description: "alfrednize is a so simple command to generate JSON for Alfred."
-    homepage: "https://github.com/chroju/alfrednize"
-    license: "MIT"
-    test: |
-      system "#{bin}/alfrednize --version"
-    install: |
-      bin.install "alfrednize"
+  disable: true
